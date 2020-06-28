@@ -1,28 +1,14 @@
-import React, { useEffect, FunctionComponent } from 'react';
+import React, { ReactElement } from 'react';
 import GlobalStyle from './global.styled';
-import { IGetProducts, ISetError } from '../../store/reducers/products';
+import HomePage from '../_pages/HomePage/home-page';
 
-interface IProps {
-  getProducts?: () => Promise<IGetProducts | ISetError>;
-}
-
-const AppContainer: FunctionComponent<IProps> = ({
-  getProducts,
-}: IProps) => {
-  useEffect(() => {
-    if (getProducts) {
-      getProducts();
-    }
-  }, []);
-
+function AppContainer(): ReactElement {
   return (
     <>
-      <main data-testid="app-container">
-        Maiia asssignment
-      </main>
+      <HomePage />
       <GlobalStyle />
     </>
   );
-};
+}
 
 export default AppContainer;

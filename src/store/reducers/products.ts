@@ -3,7 +3,7 @@ import { Action } from 'redux';
 import { GET_PRODUCTS, SET_PRODUCTS_ERRORS } from '../constants/products';
 import { IProduct } from '../../types/product';
 
-interface IProductsState {
+export interface IProductsState {
   items: IProduct[]
   isLoading: boolean
   error: string | null
