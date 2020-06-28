@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect, FunctionComponent } from 'react';
 import GlobalStyle from './global.styled';
+import { IGetProducts, ISetError } from '../../store/reducers/products';
 
-function AppContainer() {
+interface IProps {
+  getProducts?: () => Promise<IGetProducts | ISetError>;
+}
+
+const AppContainer: FunctionComponent<IProps> = ({
+  getProducts,
+}: IProps) => {
+  useEffect(() => {
+    if (getProducts) {
+      getProducts();
+    }
+  }, []);
+
   return (
     <>
       <main data-testid="app-container">
@@ -10,6 +23,6 @@ function AppContainer() {
       <GlobalStyle />
     </>
   );
-}
+};
 
 export default AppContainer;
