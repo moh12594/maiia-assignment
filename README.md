@@ -17,7 +17,6 @@ The project was bootstrapped using [Create React App](https://github.com/faceboo
   - [Storybook](#storybook)
     - [Run Storybook locally](#run-storybook-locally)
     - [Build Storybook locally](#build-storybook-locally)
-- [Assignment](#assignment)
 
 ## Get started
 ### Engines versions
@@ -62,6 +61,3 @@ npm run storybook
 ```
 npm run build-storybook
 ```
-
-## Assignment
-You can find the initial assignement [here](https://github.com/MansaGroup/kanedama/tree/master/frontend)
